@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Logs
+*.log
+logs/
+
+# Test artifacts
+*.tmp
+test_*
+!test_*.py
+
+# Compiled
+*.pyc
+*.pyo
+*.exe
+*.dll
+*.so
+*.dylib
