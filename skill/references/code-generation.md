@@ -65,7 +65,7 @@ and verify they exist. Use <STACK> (e.g., React + Vite, Node + Express).'
 
 | Task | Model |
 |---|---|
-| Simple scripts, single files | `Gemini 3.6 Flash (High)` |
+| Simple scripts, single files | `Gemini 3.7 Flash (High)` |
 | Full apps, complex scaffolding | `Gemini 3.1 Pro (High)` |
 | Code review, architecture | `Claude Sonnet 4.6 (Thinking)` |
 

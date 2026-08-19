@@ -19,7 +19,7 @@ Delegate any task to **Google Gemini** through the Antigravity CLI (`agy`) — i
 ## Prerequisites
 
 - `agy` binary installed and on PATH. Verify: `terminal(command="agy --version")` — expect `1.1.11` or newer.
-- Authenticated as a Google account. Verify: `terminal(command="agy models")` — should list `gemini-3.6-flash-high` etc. If it asks to sign in, the user must run `agy` interactively once (`pty=true`) and complete browser auth.
+- Authenticated as a Google account. Verify: `terminal(command="agy models")` — should list `gemini-3.7-flash-high` etc. If it asks to sign in, the user must run `agy` interactively once (`pty=true`) and complete browser auth.
 - Paths: `agy` stores data under `~/.gemini/antigravity-cli/` and `~/.gemini/config/`.
 
 ## Core Execution Pattern
@@ -35,7 +35,7 @@ agy -p "<PROMPT>" --dangerously-skip-permissions --print-timeout <TIMEOUT>
 | `-p` / `--print` | Non-interactive one-shot. Returns plain text stdout. |
 | `--dangerously-skip-permissions` | **Required.** Without it, headless mode auto-denies `write_file`/`command` tools and produces no output. |
 | `--print-timeout` | Upper bound. Default `5m`. Raise for video/long tasks. |
-| `--model` | Select model: `gemini-3.6-flash-high`, `gemini-3.1-pro-high`, `claude-sonnet-4-6`, etc. Run `agy models` for the full list. |
+| `--model` | Select model: `gemini-3.7-flash-high`, `gemini-3.1-pro-high`, `claude-sonnet-4-6`, etc. Run `agy models` for the full list. |
 | `--add-dir` | Expose a local directory to the agent (repeatable). Used for reference images. |
 | `--output-format` | `text` (default), `json`, or `stream-json`. Use `json` when you need structured output with `--json-schema`. |
 
@@ -228,14 +228,14 @@ terminal(command="agy -p '<TASK>' --model 'Claude Sonnet 4.6 (Thinking)' --dange
 
 | Task | Recommended Model | Why |
 |---|---|---|
-| Image generation | `Gemini 3.6 Flash (High)` | Fast, good quality (default) |
-| Video generation | `Gemini 3.6 Flash (High)` | Default, handles video |
-| Web search | `Gemini 3.6 Flash (High)` | Fast grounded search |
-| YouTube analysis | `Gemini 3.6 Flash (High)` | Native video understanding |
-| Simple code | `Gemini 3.6 Flash (High)` | Fast code gen |
+| Image generation | `Gemini 3.7 Flash (High)` | Fast, good quality (default) |
+| Video generation | `Gemini 3.7 Flash (High)` | Default, handles video |
+| Web search | `Gemini 3.7 Flash (High)` | Fast grounded search |
+| YouTube analysis | `Gemini 3.7 Flash (High)` | Native video understanding |
+| Simple code | `Gemini 3.7 Flash (High)` | Fast code gen |
 | Complex reasoning / app scaffold | `Gemini 3.1 Pro (High)` | Best reasoning |
 | Code review / architecture | `Claude Sonnet 4.6 (Thinking)` | Excellent at code |
-| Quick one-liners | `Gemini 3.6 Flash (Low)` | Fastest, cheapest |
+| Quick one-liners | `Gemini 3.7 Flash (Low)` | Fastest, cheapest |
 
 Run `agy models` to see the current list. Model display names need exact match including `(High)` suffix.
 
@@ -273,7 +273,7 @@ After every `agy` call:
 ## Common Pitfalls
 
 1. **Missing `--dangerously-skip-permissions`** — headless `agy -p` auto-denies all tools without this flag. You get `jetski: no output produced` and no files. Always include it.
-2. **Wrong model name** — display names are exact: `Gemini 3.6 Flash (High)` not `gemini-3.6-flash-high`. Use `agy models` to verify.
+2. **Wrong model name** — display names are exact: `Gemini 3.7 Flash (High)` not `gemini-3.7-flash-high`. Use `agy models` to verify.
 3. **Timeout too short** — image/video generation needs 3-5 minutes. If you get a timeout, raise `--print-timeout`.
 4. **Path with spaces** — wrap Windows paths in the prompt with quotes or use forward slashes.
 5. **Image extension mismatch** — output may be JPEG data with `.png` extension. Check with `file` command; the image is still valid.

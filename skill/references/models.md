@@ -4,9 +4,9 @@
 
 | Model ID | Display Name | Best For |
 |---|---|---|
-| `gemini-3.6-flash-high` | Gemini 3.6 Flash (High) | Default, balanced, all tasks |
-| `gemini-3.6-flash-medium` | Gemini 3.6 Flash (Medium) | Faster, slightly less reasoning |
-| `gemini-3.6-flash-low` | Gemini 3.6 Flash (Low) | Fastest, cheapest |
+| `gemini-3.7-flash-high` | Gemini 3.7 Flash (High) | Default, balanced, all tasks |
+| `gemini-3.7-flash-medium` | Gemini 3.7 Flash (Medium) | Faster, slightly less reasoning |
+| `gemini-3.7-flash-low` | Gemini 3.7 Flash (Low) | Fastest, cheapest |
 | `gemini-3.5-flash-high` | Gemini 3.5 Flash (High) | Previous gen, stable |
 | `gemini-3.5-flash-medium` | Gemini 3.5 Flash (Medium) | Faster |
 | `gemini-3.5-flash-low` | Gemini 3.5 Flash (Low) | Fastest |
@@ -19,7 +19,7 @@
 ## Usage
 
 ```
-agy -p "prompt" --model "Gemini 3.6 Flash (High)" --dangerously-skip-permissions
+agy -p "prompt" --model "Gemini 3.7 Flash (High)" --dangerously-skip-permissions
 agy -p "prompt" --model "Claude Sonnet 4.6 (Thinking)" --dangerously-skip-permissions
 ```
 
@@ -37,5 +37,5 @@ For most tasks, `high` is recommended. Use `low` only for trivial tasks.
 
 ## Default Model
 
-- Default: `Gemini 3.6 Flash (High)` (gemini-3.6-flash-high)
+- Default: `Gemini 3.7 Flash (High)` (gemini-3.7-flash-high)
 - Image model: `gemini-3.1-flash-lite-image` (used internally by generate_image)

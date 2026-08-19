@@ -61,7 +61,7 @@ local proxy server needed.**
 that talks directly to `https://generativelanguage.googleapis.com/v1beta` with
 native transport (thinking_config support). Additionally, Gemini models are
 **already available** through the existing `commandcode` provider
-(`google/gemini-3.6-flash`, `google/gemini-3.5-flash`, etc.).
+(`google/gemini-3.7-flash`, `google/gemini-3.5-flash`, etc.).
 
 **How:** Just uncomment `GOOGLE_API_KEY` in `C:\Users\uguri\AppData\Local\hermes\.env`
 and optionally add this to `config.yaml`:
@@ -96,9 +96,9 @@ All tests performed via `agy v1.1.11` on Windows, authenticated as
 ### Available Models (via `agy models`)
 
 ```
-gemini-3.6-flash-high     (default)
-gemini-3.6-flash-medium
-gemini-3.6-flash-low
+gemini-3.7-flash-high     (default)
+gemini-3.7-flash-medium
+gemini-3.7-flash-low
 gemini-3.5-flash-high/medium/low
 gemini-3.1-pro-high/low
 claude-sonnet-4-6         (Thinking)
@@ -131,7 +131,7 @@ The skill teaches Hermes:
 1. **When to reach for `agy`:** image gen, web search, YouTube analysis, code gen
 2. **How to call it:** `agy -p "prompt" --dangerously-skip-permissions --print-timeout 5m`
 3. **How to handle output:** stdout text for search/code, file paths for images
-4. **Model selection:** `--model "Gemini 3.6 Flash (High)"` for images,
+4. **Model selection:** `--model "Gemini 3.7 Flash (High)"` for images,
    `--model "Gemini 3.1 Pro (High)"` for complex reasoning
 5. **Reference images:** place files in a temp dir, use `--add-dir` to expose
    them to the agent
@@ -368,10 +368,10 @@ agy -p "prompt" --dangerously-skip-permissions
 
 | Task | Recommended Model | Why |
 |---|---|---|
-| Image generation | `gemini-3.6-flash-high` | Fast, good quality |
+| Image generation | `gemini-3.7-flash-high` | Fast, good quality |
 | Complex reasoning | `gemini-3.1-pro-high` | Best reasoning |
-| Web search | `gemini-3.6-flash-high` | Fast, grounded search |
-| YouTube analysis | `gemini-3.6-flash-high` | Native video understanding |
+| Web search | `gemini-3.7-flash-high` | Fast, grounded search |
+| YouTube analysis | `gemini-3.7-flash-high` | Native video understanding |
 | Code generation | `claude-sonnet-4-6` | Excellent at code (available via agy) |
 
 ### Timeout Recommendations
@@ -417,7 +417,7 @@ The `google-antigravity` Python SDK exposes these built-in tools:
 | `find_file` | read-only | Find files by name |
 | `ask_question` | interactive | Ask user clarifying question |
 
-**Default model:** gemini-3.6-flash
+**Default model:** gemini-3.7-flash
 **Default image model:** gemini-3.1-flash-lite-image
 
 This is what `agy -p` uses under the hood. When we build the plugin, we're
